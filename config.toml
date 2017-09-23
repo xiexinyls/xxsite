@@ -1,5 +1,5 @@
-#baseurl = "/"
-baseurl = "https://xiexinyls.github.io/xxsite/"
+baseurl = "/"
+#baseurl = "https://xiexinyls.github.io/xxsite/"
 languageCode = "en-us"
 title = "A minimal Hugo website"
 theme = "hugo-xmin"
