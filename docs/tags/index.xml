@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on A minimal Hugo website</title>
+    <link>https://xiexinyls.github.io/xxsite/tags/</link>
+    <description>Recent content in Tags on A minimal Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://xiexinyls.github.io/xxsite/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blogdown</title>
+      <link>https://xiexinyls.github.io/xxsite/tags/blogdown/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/tags/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://xiexinyls.github.io/xxsite/tags/markdown/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MathJax</title>
+      <link>https://xiexinyls.github.io/xxsite/tags/mathjax/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/tags/mathjax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pandoc</title>
+      <link>https://xiexinyls.github.io/xxsite/tags/pandoc/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/tags/pandoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RStudio</title>
+      <link>https://xiexinyls.github.io/xxsite/tags/rstudio/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/tags/rstudio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://xiexinyls.github.io/xxsite/tags/tutorial/</link>
+      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
