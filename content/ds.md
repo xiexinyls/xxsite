@@ -1,5 +1,5 @@
 ---
-title: "Data Science"
+title: "Data Science Notes"
 draft: false
 ---
 
@@ -7,32 +7,38 @@ I have summarized some useful notes covering several machine learning and data m
 
 ## My Data Science Projects
 
-Driver Telematics Analysis from Kaggle
+- Driver Telematics Analysis from Kaggle
 
 ## Four Steps of Data Analysis
 
-Collecting Data
-Data Manipulation using numpy
-SQL Quick Reference
-Data Cleaning using pandas/numpy?
-How to Read Data using Python?
-Feature Engineering
-Data Splitting and Selection
-Model Selection
-Modeling
-Statistical Learning Theory
-Brief Introduction to scikit-learn Classifiers in Python
-Brief Introduction to caret Classifiers in R
-SVM
-Outlier Detection Methods
-Kernel Method in Logistic Regression, Linear Regression, and SVM
-Neural Network
-EM Algorithm
-Bayesian Network
-Hidden Markov Model
-Clustering Methods
-Dimension Reduction
-Data Presentation
+1. Collecting Data
+  - Data Manipulation using numpy
+  - SQL Quick Reference
+  - Data Cleaning using pandas/numpy?
+  - How to Read Data using Python?
+
+2. Feature Engineering
+
+  - Data Splitting and Selection
+  - Model Selection
+
+3. Modeling
+
+  - Statistical Learning Theory
+  - Brief Introduction to scikit-learn Classifiers in Python
+  - Brief Introduction to caret Classifiers in R
+  - SVM
+  - Outlier Detection Methods
+  - Kernel Method in Logistic Regression, Linear Regression, and SVM
+  - Neural Network
+  - EM Algorithm
+  - Bayesian Network
+  - Hidden Markov Model
+  - Clustering Methods
+  - Dimension Reduction
+
+4. Data Presentation
+
 Data Visualization using matplotlib
 
 Math
