@@ -23,12 +23,12 @@
   </url>
   
   <url>
-    <loc>https://xiexinyls.github.io/xxsite/categories/</loc>
-    <priority>0</priority>
+    <loc>https://xiexinyls.github.io/xxsite/cv/</loc>
   </url>
   
   <url>
-    <loc>https://xiexinyls.github.io/xxsite/cv/</loc>
+    <loc>https://xiexinyls.github.io/xxsite/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
