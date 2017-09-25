@@ -22,6 +22,10 @@ publishDir = "docs"
     name = "CV"
     url = "/cv/"
     weight = 2
+[[menu.main]]
+    name = "Data Science"
+    url = "/ds/"
+    weight = 2
 
 [params]
     description = "Xin's Personal Website."

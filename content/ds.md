@@ -1,0 +1,51 @@
+---
+title: "Data Science"
+draft: false
+---
+
+I have summarized some useful notes covering several machine learning and data mining subjects. These materials are written in a way that is easy to pick up if you have experience in these areas. Some data analysis coding pieces are also provided for quick coding practice.
+
+## My Data Science Projects
+
+Driver Telematics Analysis from Kaggle
+
+## Four Steps of Data Analysis
+
+Collecting Data
+Data Manipulation using numpy
+SQL Quick Reference
+Data Cleaning using pandas/numpy?
+How to Read Data using Python?
+Feature Engineering
+Data Splitting and Selection
+Model Selection
+Modeling
+Statistical Learning Theory
+Brief Introduction to scikit-learn Classifiers in Python
+Brief Introduction to caret Classifiers in R
+SVM
+Outlier Detection Methods
+Kernel Method in Logistic Regression, Linear Regression, and SVM
+Neural Network
+EM Algorithm
+Bayesian Network
+Hidden Markov Model
+Clustering Methods
+Dimension Reduction
+Data Presentation
+Data Visualization using matplotlib
+
+Math
+
+Statistics Basics
+
+Programming Techniques
+
+Python VS R
+Python built-in Data Structure
+SAS Basics
+ggplot2 in R
+C++ Quick Reference
+Implementing Data Structures and Algorithms in C++
+Data Container Comparison between C++ and Python
+Quote Conventions

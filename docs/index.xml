@@ -50,5 +50,16 @@ Quisque mattis volutpat lorem vitae feugiat.</description>
       <description>Research Interests  Climate Model Evaluation and Diagnostics Scale-aware Cloud Representation in Climate Model Convection Parameterization in Climate Model  Education  Ph.D. of Atmospheric Science 2010-2017 School of Marine and Atmospheric Sciences, Stony Brook University M. S. of Meteorology 2007-2010 Institute of Atmospheric Physics, Chinese Academy of Sciences, China B. S. of Meteorology 2003-2007 Zhejiang University, China  Publications Xie, X. and M. Zhang (2015). &amp;ldquo;Scale-aware parameterization of liquid cloud inhomogeneity and its impact on simulated climate in CESM.</description>
     </item>
     
+    <item>
+      <title>Data Science</title>
+      <link>https://xiexinyls.github.io/xxsite/ds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/ds/</guid>
+      <description>I have summarized some useful notes covering several machine learning and data mining subjects. These materials are written in a way that is easy to pick up if you have experience in these areas. Some data analysis coding pieces are also provided for quick coding practice.
+My Data Science Projects Driver Telematics Analysis from Kaggle
+Four Steps of Data Analysis Collecting Data Data Manipulation using numpy SQL Quick Reference Data Cleaning using pandas/numpy?</description>
+    </item>
+    
   </channel>
 </rss>
