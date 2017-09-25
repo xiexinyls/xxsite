@@ -3,16 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://xiexinyls.github.io/xxsite/note/2017/06/14/another-note/</loc>
-    <lastmod>2017-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/note/2017/06/13/a-quick-note/</loc>
-    <lastmod>2017-06-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://xiexinyls.github.io/xxsite/post/2016/02/14/a-plain-markdown-post/</loc>
     <lastmod>2016-02-14T00:00:00+00:00</lastmod>
   </url>
@@ -39,13 +29,13 @@
   
   <url>
     <loc>https://xiexinyls.github.io/xxsite/categories/example/</loc>
-    <lastmod>2017-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://xiexinyls.github.io/xxsite/</loc>
-    <lastmod>2017-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -63,12 +53,6 @@
   <url>
     <loc>https://xiexinyls.github.io/xxsite/tags/mathjax/</loc>
     <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/note/</loc>
-    <lastmod>2017-06-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -93,12 +77,6 @@
   <url>
     <loc>https://xiexinyls.github.io/xxsite/tags/</loc>
     <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/tags/tutorial/</loc>
-    <lastmod>2017-06-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
