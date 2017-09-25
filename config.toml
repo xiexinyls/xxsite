@@ -36,4 +36,4 @@ publishDir = "docs"
 
 [params]
     description = "A website built through Hugo and blogdown."
-    footer = "&copy; [Yihui Xie](https://yihui.name) 2017 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
+    footer = "&copy; Xin Xie 2017 | [LinkedIn](https://www.linkedin.com/in/xin-xie-ph-d-1274595a/)"
