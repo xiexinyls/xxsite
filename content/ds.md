@@ -39,19 +39,19 @@ I have summarized some useful notes covering several machine learning and data m
 
 4. Data Presentation
 
-Data Visualization using matplotlib
+  - Data Visualization using matplotlib
 
-Math
+## Math
 
-Statistics Basics
+- Statistics Basics
 
-Programming Techniques
+## Programming Techniques
 
-Python VS R
-Python built-in Data Structure
-SAS Basics
-ggplot2 in R
-C++ Quick Reference
-Implementing Data Structures and Algorithms in C++
-Data Container Comparison between C++ and Python
-Quote Conventions
+- Python VS R
+- Python built-in Data Structure
+- SAS Basics
+- ggplot2 in R
+- C++ Quick Reference
+- Implementing Data Structures and Algorithms in C++
+- Data Container Comparison between C++ and Python
+- Quote Conventions
