@@ -24,7 +24,7 @@ publishDir = "docs"
     weight = 2
 [[menu.main]]
     name = "Data Science"
-    url = "/ds/"
+    url = "/datasci/"
     weight = 2
 
 [params]

@@ -32,7 +32,12 @@
   </url>
   
   <url>
+    <loc>https://xiexinyls.github.io/xxsite/datasci/</loc>
+  </url>
+  
+  <url>
     <loc>https://xiexinyls.github.io/xxsite/ds/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -44,6 +49,10 @@
   <url>
     <loc>https://xiexinyls.github.io/xxsite/</loc>
     <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/ds/py-read-data/</loc>
   </url>
   
   <url>

@@ -52,13 +52,24 @@ Quisque mattis volutpat lorem vitae feugiat.</description>
     
     <item>
       <title>Data Science Notes</title>
-      <link>https://xiexinyls.github.io/xxsite/ds/</link>
+      <link>https://xiexinyls.github.io/xxsite/datasci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://xiexinyls.github.io/xxsite/ds/</guid>
+      <guid>https://xiexinyls.github.io/xxsite/datasci/</guid>
       <description>I have summarized some useful notes covering several machine learning and data mining subjects. These materials are written in a way that is easy to pick up if you have experience in these areas. Some data analysis coding pieces are also provided for quick coding practice.
 My Data Science Projects  Driver Telematics Analysis from Kaggle  Four Steps of Data Analysis  Collecting Data
  Data Manipulation using numpy SQL Quick Reference Data Cleaning using pandas/numpy?</description>
+    </item>
+    
+    <item>
+      <title>How to Read Data using Python?</title>
+      <link>https://xiexinyls.github.io/xxsite/ds/py-read-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/ds/py-read-data/</guid>
+      <description>Read From Text File Suppose we have an example data file
+symbol,date,time,high,low appl,20000101,15:00,100.1,90.5 appl,20000102,15:00,100.1,90.5 intc,20000101,15:00,30.1,28.5  Use Python Built-in I/O If the csv data file is clean and ready to be used (pure numeric, no delimiter messing up, no quote problem), we can use the simple Python I/O interface to read it.
+Method One: Loop the data file line by line. This method is more efficient and recommended. &amp;ldquo;line&amp;rdquo; is a string.</description>
     </item>
     
   </channel>
