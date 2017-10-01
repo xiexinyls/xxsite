@@ -59,3 +59,9 @@ $$ P(w|\mathbf{X}_D,\mathbf{Y}_D) = \frac{P(\mathbf{X}_D,\mathbf{Y}_D|w) \cdot P
 where the denominator is given by
 $$ P(\mathbf{X}_D,\mathbf{Y}_D) = \int P(\mathbf{X}_D,\mathbf{Y}_D|w) \textrm{d}w $$
 , which totally depends on data and has not much to do with the parameter estimation. However, the nominator has the paramter term $w$ so it is important to us. Again if we assume certain form of $ P(X_j,Y_j|w) $ and parameter distribution $ P(w) $, we want to maximize the following form
+$$
+\begin{align*}
+P(w|\mathbf{X}_{D}=\mathbf{x}_{D},\mathbf{Y}_{D}=\mathbf{y}_{D}) & = \frac{P(\mathbf{X}_{D}=\mathbf{x}_{D},\mathbf{Y}_{D}=\mathbf{y}_{D}|w) \cdot P(w)}{P(\mathbf{x}_{D},\mathbf{y}_{D})}\\
+ & =\frac{ P(X_1^1=x_1^1,\cdots,X_d^1=x_d^1,\cdots,X_1^n=x_1^n,\cdots,X_d^n=x_d^n,Y^1=y^1,\cdots,Y^n=y^n|w) \cdot P(w)}{P(X_1^1=x_1^1,\cdots,X_d^1=x_d^1,\cdots,X_1^n=x_1^n,\cdots,X_d^n=x_d^n,Y^1=y^1,\cdots,Y^n=y^n)}
+\end{align*}
+$$
