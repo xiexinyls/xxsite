@@ -1,6 +1,7 @@
 ---
 title: "Statistical Learning Theory"
 draft: false
+markup: mmark
 ---
 $
 \def\Cov{\mathrm{Cov} }
