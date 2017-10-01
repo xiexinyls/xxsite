@@ -15,7 +15,7 @@ I have summarized some useful notes covering several machine learning and data m
   - Data Manipulation using numpy
   - SQL Quick Reference
   - Data Cleaning using pandas/numpy?
-  - [How to Read Data using Python?](/ds/py-read-data/)
+  - [How to Read Data using Python?](/xxsite/ds/py-read-data/)
 
 2. Feature Engineering
 
