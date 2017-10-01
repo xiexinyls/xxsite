@@ -72,5 +72,14 @@ symbol,date,time,high,low appl,20000101,15:00,100.1,90.5 appl,20000102,15:00,100
 Method One: Loop the data file line by line. This method is more efficient and recommended. &amp;ldquo;line&amp;rdquo; is a string.</description>
     </item>
     
+    <item>
+      <title>Stat Learning</title>
+      <link>https://xiexinyls.github.io/xxsite/ds/stat-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/ds/stat-learning/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
