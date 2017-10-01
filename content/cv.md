@@ -11,12 +11,9 @@ draft: false
 
 ## Education
 
-- Ph.D. of Atmospheric Science 2010-2017
-School of Marine and Atmospheric Sciences, Stony Brook University
-- M. S. of Meteorology 2007-2010
-Institute of Atmospheric Physics, Chinese Academy of Sciences, China
-- B. S. of Meteorology 2003-2007
-Zhejiang University, China
+- Ph.D. of Atmospheric Science 2010-2017, School of Marine and Atmospheric Sciences, Stony Brook University
+- M. S. of Meteorology 2007-2010, Institute of Atmospheric Physics, Chinese Academy of Sciences, China
+- B. S. of Meteorology 2003-2007, Zhejiang University, China
 
 ## Publications
 
