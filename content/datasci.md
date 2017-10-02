@@ -24,7 +24,7 @@ I have summarized some useful notes covering several machine learning and data m
 
 3. Modeling
 
-  - [Statistical Learning Theory](/xxsite/ds/stat-learning/)
+  - [Statistical Learning Theory](https://github.com/xiexinyls/ds-notebook/blob/master/statistical_learning.ipynb)
   - [Brief Introduction to `scikit-learn` Classifiers in Python](https://github.com/xiexinyls/ds-notebook/blob/master/classifier-scikit-learn.ipynb)
   - [Brief Introduction to `caret` Classifiers in R](https://github.com/xiexinyls/ds-notebook/blob/master/classifier-R.ipynb)
   - SVM

@@ -6,10 +6,21 @@
     <description>Recent content in Home on A minimal Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Feb 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Oct 2017 01:51:59 -0400</lastBuildDate>
     
 	<atom:link href="https://xiexinyls.github.io/xxsite/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Test</title>
+      <link>https://xiexinyls.github.io/xxsite/test/</link>
+      <pubDate>Sun, 01 Oct 2017 01:51:59 -0400</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/test/</guid>
+      <description>$x_1=z$
+$$ P^12 = z{1}^{2}$$
+Hi, $ P^j2 = z{1}^{2}$.</description>
+    </item>
     
     <item>
       <title>A Plain Markdown Post</title>
@@ -70,16 +81,6 @@ My Data Science Projects  Driver Telematics Analysis from Kaggle  Four Steps of 
       <description>Read From Text File Suppose we have an example data file
 symbol,date,time,high,low appl,20000101,15:00,100.1,90.5 appl,20000102,15:00,100.1,90.5 intc,20000101,15:00,30.1,28.5  Use Python Built-in I/O If the csv data file is clean and ready to be used (pure numeric, no delimiter messing up, no quote problem), we can use the simple Python I/O interface to read it.
 Method One: Loop the data file line by line. This method is more efficient and recommended. &amp;ldquo;line&amp;rdquo; is a string.</description>
-    </item>
-    
-    <item>
-      <title>Statistical Learning Theory</title>
-      <link>https://xiexinyls.github.io/xxsite/ds/stat-learning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiexinyls.github.io/xxsite/ds/stat-learning/</guid>
-      <description>$ \def\Cov{\mathrm{Cov} } \def\Var {\mathrm{Var} } \def\diff{\mathrm{d} } \def\Diff{\mathrm{D} } \def\ln{\mathrm{ln} } \def\pt{\partial } \def\E{\mathrm{E}} $ (material organized by Xin Xie)
-Some math notation are explained first. The operator $P(S)$ means the probability of some set $S$ of sample space. Random variables are some real-value function of sample space. It would be much easier to specify the set we want for the probability by using some condition of random variables. For example, $P(X=x)$ means the probabililty for the set when random variable $ X $ is taking the value $ x $.</description>
     </item>
     
   </channel>
