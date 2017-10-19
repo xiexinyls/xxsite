@@ -50,7 +50,7 @@ I have summarized some useful notes covering several machine learning and data m
 - Python VS R
 - Python built-in Data Structure
 - SAS Basics
-- ggplot2 in R
+- [ggplot2 in R](/xxsite/ds/ggplot/)
 - C++ Quick Reference
 - Implementing Data Structures and Algorithms in C++
 - Data Container Comparison between C++ and Python

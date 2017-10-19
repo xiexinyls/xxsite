@@ -1,6 +1,5 @@
 ---
-title: "Ggplot"
-date: 2017-10-19T00:33:14-04:00
+title: "ggplot2 in R"
 draft: false
 ---
 
