@@ -13,10 +13,16 @@ The link between data and figure is established by specifying an "aethetic" (an 
 
 Unlike `matplotlib` in Python, `ggplot2` uses every data record to specify the plotting element in the figure. Therefore, it is better to use long data format for easier plotting. If the data are in wide format, use R library `reshape2` to convert the wide format to long format first. The following `reshape2` example converts the wide format dataframe into long format dataframe selecting only `var3` and `var4` variables with `var1` and `var2` as ID variables.
 
+    library(reshape2)
     longdata = melt( widedata, id.vars=c('var1','var2'), measure.vars=c('var3','var4'), 
                variable.name='var', value.name='value' )
     longdata = melt( widedata, id.vars=1:2, measure.vars=3:4,
                variable.name='var', value.name='value' )
+
+Another way is to use the library `tidyr`
+
+    library(tidyr)
+    longdata = gather( widedata, "var", "value", 
 
 # XY Plot
 

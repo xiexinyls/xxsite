@@ -77,10 +77,17 @@ theme()
 
 <p>Unlike <code>matplotlib</code> in Python, <code>ggplot2</code> uses every data record to specify the plotting element in the figure. Therefore, it is better to use long data format for easier plotting. If the data are in wide format, use R library <code>reshape2</code> to convert the wide format to long format first. The following <code>reshape2</code> example converts the wide format dataframe into long format dataframe selecting only <code>var3</code> and <code>var4</code> variables with <code>var1</code> and <code>var2</code> as ID variables.</p>
 
-<pre><code>longdata = melt( widedata, id.vars=c('var1','var2'), measure.vars=c('var3','var4'), 
+<pre><code>library(reshape2)
+longdata = melt( widedata, id.vars=c('var1','var2'), measure.vars=c('var3','var4'), 
            variable.name='var', value.name='value' )
 longdata = melt( widedata, id.vars=1:2, measure.vars=3:4,
            variable.name='var', value.name='value' )
+</code></pre>
+
+<p>Another way is to use the library <code>tidyr</code></p>
+
+<pre><code>library(tidyr)
+longdata = gather( widedata, &quot;var&quot;, &quot;value&quot;, 
 </code></pre>
 
 <h1 id="xy-plot">XY Plot</h1>
