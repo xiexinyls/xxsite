@@ -1,8 +1,8 @@
 #baseurl = "/"
 baseurl = "https://xiexinyls.github.io/xxsite/"
 languageCode = "en-us"
-title = "A minimal Hugo website"
-theme = "hugo-xmin"
+title = "Xin Xie's Personal Website"
+theme = "hugo-xx"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -9,6 +9,61 @@
   
   <url>
     <loc>https://xiexinyls.github.io/xxsite/post/2016/02/14/a-plain-markdown-post/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/tags/blogdown/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/categories/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/categories/example/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/categories/hugo/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/tags/markdown/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/tags/mathjax/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/tags/pandoc/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/post/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/tags/rstudio/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiexinyls.github.io/xxsite/tags/</loc>
     <lastmod>2016-02-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -26,28 +81,15 @@
   </url>
   
   <url>
-    <loc>https://xiexinyls.github.io/xxsite/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://xiexinyls.github.io/xxsite/datasci/</loc>
   </url>
   
   <url>
     <loc>https://xiexinyls.github.io/xxsite/ds/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://xiexinyls.github.io/xxsite/categories/example/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/</loc>
-    <lastmod>2017-10-01T01:51:59-04:00</lastmod>
+    <loc>https://xiexinyls.github.io/xxsite/ds/ggplot/</loc>
   </url>
   
   <url>
@@ -55,59 +97,7 @@
   </url>
   
   <url>
-    <loc>https://xiexinyls.github.io/xxsite/categories/hugo/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/tags/markdown/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/tags/mathjax/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/tags/pandoc/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/post/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://xiexinyls.github.io/xxsite/ds/dataincu/</loc>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/tags/rstudio/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/tags/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/tags/blogdown/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiexinyls.github.io/xxsite/ds/ggplot/</loc>
   </url>
   
 </urlset>
