@@ -4,7 +4,8 @@ title: Home
 
 # Xin Xie
 
-<img src="/xxsite/xiexin-work-800.jpg" style="max-width:25%;min-width:50px;margin:10px 20px;float:right;" alt="Xin's Photo" />
+<img src="/xxsite/xiexin-work-800.jpg" style="border-radius:5px;max-width:20%;min-width:50px;margin-left:20px;margin-bottom:10px;float:right;" alt="Xin's Photo">
+
 
 My current research topic is to analyze climate data, study and understand the climate impacts of cloud processes and finally represent them correctly using statistics and climate computer models.
 

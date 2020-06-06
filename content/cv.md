@@ -3,6 +3,14 @@ title: "CV"
 draft: false
 ---
 
+I am currently a Research Data Scientist in RBC Capital Markets US research department.
+
+- December 2018 - Present, Research Data Scientist, New York City, New York, RBC Capital Markets
+- January 2018 - October 2018, Machine Learning Engineer, New York City, New York, Urbint
+- June 2017 - August 2017, Advanced Analystics Intern, Harford, Connecticut, Travelers
+- June 2016 - October 2016, Data Scientist Intern, Jersey City, New Jersey, Verisk Analytics
+
+
 ## Research Interests
 
 - Climate Model Evaluation and Diagnostics

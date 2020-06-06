@@ -10,6 +10,12 @@ preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 publishDir = "docs"
 
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"
     note = "/note/:year/:month/:day/:slug/"
@@ -29,4 +35,4 @@ publishDir = "docs"
 
 [params]
     description = "Xin's Personal Website."
-    footer = "&copy; Xin Xie 2018 | [LinkedIn](https://www.linkedin.com/in/xin-xie-ph-d-1274595a/)"
+    footer = "&copy; Xin Xie 2020 | [LinkedIn](https://www.linkedin.com/in/xin-xie-ph-d-1274595a/)"
