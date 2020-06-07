@@ -2,7 +2,7 @@
 baseurl = "https://xiexinyls.github.io/xxsite/"
 languageCode = "en-us"
 title = "Xin Xie's Personal Website"
-theme = "hugo-xx"
+theme = "hugo-xmin"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
