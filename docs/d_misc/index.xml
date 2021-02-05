@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>D_miscs on Xin Xie&#39;s Personal Website</title>
+    <link>https://xiexinyls.github.io/xxsite/d_misc/</link>
+    <description>Recent content in D_miscs on Xin Xie&#39;s Personal Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://xiexinyls.github.io/xxsite/d_misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://xiexinyls.github.io/xxsite/d_misc/mortgage_derivation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/d_misc/mortgage_derivation/</guid>
+      <description>Mortgage Formula Derivation Geometry Series $$ S_n = 1 + a + a^2 + \cdots + a^{n-1} + a^n$$
+$$ S_n a = a + a^2 + a^3 + \cdots + a^n+ a^{n+1} $$
+$$ S_n (a-1) = a^{n+1}-1 $$
+$$ S_n = \frac{1-a^{n+1}}{(1-a)} $$
+Derivation $n$ number of months $m$ monthly payment $a$ annualized interest rate $r=a/12$ monthly interest rate (anuualized interest rate divided by 12 months) $p$ principal</description>
+    </item>
+    
+  </channel>
+</rss>
