@@ -32,7 +32,11 @@ publishDir = "docs"
     name = "Data Science"
     url = "/datasci/"
     weight = 2
+[[menu.main]]
+    name = "Misc"
+    url = "/misc/"
+    weight = 2
 
 [params]
     description = "Xin's Personal Website."
-    footer = "&copy; Xin Xie 2020 | [LinkedIn](https://www.linkedin.com/in/xin-xie-ph-d-1274595a/)"
+    footer = "&copy; Xin Xie 2021 | [LinkedIn](https://www.linkedin.com/in/xin-xie-ph-d-1274595a/)"

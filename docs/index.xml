@@ -44,6 +44,19 @@ Quisque mattis volutpat lorem vitae feugiat.</description>
     </item>
     
     <item>
+      <title></title>
+      <link>https://xiexinyls.github.io/xxsite/d_misc/mortgage_derivation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/d_misc/mortgage_derivation/</guid>
+      <description>Mortgage Formula Derivation Geometry Series $$ S_n = 1 + a + a^2 + \cdots + a^{n-1} + a^n$$
+$$ S_n a = a + a^2 + a^3 + \cdots + a^n+ a^{n+1} $$
+$$ S_n (a-1) = a^{n+1}-1 $$
+$$ S_n = \frac{1-a^{n+1}}{(1-a)} $$
+Derivation $n$ number of months $m$ monthly payment $a$ annualized interest rate $r=a/12$ monthly interest rate (anuualized interest rate divided by 12 months) $p$ principal</description>
+    </item>
+    
+    <item>
       <title>About Hugo XMin</title>
       <link>https://xiexinyls.github.io/xxsite/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -91,6 +104,15 @@ ggplot(data=dfname, aes(x=varname1, y=varname2) ) + geom_&amp;lt;geom type&amp;g
       <description>Read From Text File Suppose we have an example data file
 symbol,date,time,high,low appl,20000101,15:00,100.1,90.5 appl,20000102,15:00,100.1,90.5 intc,20000101,15:00,30.1,28.5 Use Python Built-in I/O If the csv data file is clean and ready to be used (pure numeric, no delimiter messing up, no quote problem), we can use the simple Python I/O interface to read it.
 Method One: Loop the data file line by line. This method is more efficient and recommended. &amp;ldquo;line&amp;rdquo; is a string.</description>
+    </item>
+    
+    <item>
+      <title>Misc</title>
+      <link>https://xiexinyls.github.io/xxsite/misc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiexinyls.github.io/xxsite/misc/</guid>
+      <description>Finance Notes  Mortgage  Mortgage Calculator Mortgage Derivation    </description>
     </item>
     
     <item>

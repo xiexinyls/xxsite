@@ -1,0 +1,269 @@
+<html>
+<head>
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input{
+    text-align: right;
+    margin: 1px;
+    font-size: medium;
+}
+
+.inforow {
+    margin: 5px;
+}
+.output {
+    padding: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+table {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color:whitesmoke;
+}
+td {
+    text-align: right;
+    padding: 3px;
+}
+th {
+    text-align: center;
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: small;
+    margin: 0px;
+    background-color: lightgray;
+}
+tr:hover { background: rgb(255, 236, 183); }
+
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  /* padding: 2px 1px 2px 2px; */
+  /* margin: 5px 1px 3px 0px; */
+  border: 1px solid #DDDDDD;
+}
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  /* padding: 2px 1px 2px 2px; */
+  /* margin: 5px 1px 3px 0px; */
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+</style>
+
+</head>
+<body>
+<title>Mortgate Calculator</title>
+<h1>Mortgage Calculator / 房贷计算器</h1>
+
+<div style="margin-top: 20px; margin-bottom: 20px;">
+<div class="inforow">House Price / 房产总价: <input type="text" id="in_house_price" value="500" size="10" maxlength="5" onkeyup="update_down_number()"> K / 千</div>
+<div class="inforow">Down Payment / 首付: <input type="text" id="in_down_number" size="10" maxlength="5" onkeyup="update_down_percent()" focusout="update_down_percent()"> K / 千 
+<input type="text" id="in_down_percent" value="20" size="10" onkeyup="update_down_number()">%</div>
+<div class="inforow">Annualized Interest Rate / 房贷年化利率: <input type="text" id="in_a_interestrate" value="2.5" size="10" maxlength="5" >%</div>
+<div class="inforow">HOA / 物业费: <input type="text" id="in_hoa" value="400" size="10" maxlength="5" ></div>
+<div class="inforow">Other Fee / 其他费用: <input type="text" id="in_other_fee" value="0" size="10" maxlength="5" ></div>
+<div class="inforow">Property Tax Rate / 房产税率: <input type="text" id="in_property_tax" value="1.54" size="10" maxlength="5">%</div>
+<div class="inforow">Number of Terms / 房贷年限: <input type="text" id="in_nyearterm" value="30" size="10" maxlength="2" > Years<br></div>
+</div>
+
+<button style="padding: 3px 20px 3px 20px; font-size: large;" onclick="calculate_res()" >Calculate / 计算</button>
+
+<div id="dv_res" style="margin-top: 20px; margin-bottom: 20px;">
+<div class="inforow">Mortgage / 总房贷: <span id="sp_mortgage" class="output" ></span></div>
+<div class="inforow">Monthly Payment to Bank / 每月银行还款: <span id="sp_monthly_payment" class="output" ></span></div>
+<div class="inforow">Monthly Cost / 每月总花费: <span id="sp_monthly_cost" class="output" ></span></div>
+<br>
+<div class="inforow">Yearly Payment to Bank / 每月银行还款: <span id="sp_yearly_payment" class="output" ></span></div>
+<div class="inforow">Yearly Property Tax / 每年缴纳房产税: <span id="sp_yearly_property_tax" class="output" ></span></div>
+<div class="inforow">Yearly HOA / 每年缴纳物业费: <span id="sp_yearly_hoa" class="output" ></span></div>
+<div class="inforow">Yearly Other Fee / 每年缴纳其他费用: <span id="sp_yearly_other_fee" class="output" ></span></div>
+<div class="inforow">Yearly Cost / 每年总花费: <span id="sp_yearly_cost" class="output" ></span></div>
+<br>
+<div class="inforow">Total Interest / 利息总和: <span id="sp_total_interest" class="output" ></span></div>
+<div class="inforow">House Price+Interest / 房产价格和利息总和: <span id="sp_house_price_interest" class="output" ></span></div>
+<div class="inforow">Total Interest over House Price / 总利息占房产价格比率: <span id="sp_total_interest_rate" class="output" ></span>%</div>
+<div class="inforow">Total Interest over Principal / 总利息占房贷比率: <span id="sp_total_interest_rate_principal" class="output" ></span>%</div>
+<div id="dv_term_res" style="margin-left:10px; margin-top:20px"></div>
+</div>
+
+<script>
+
+function update_down_percent( ) {
+    let elem = document.getElementById('in_down_number');
+    let in_house_price = document.getElementById('in_house_price');
+    let in_down_percent = document.getElementById('in_down_percent');
+    let house_price = parseFloat( in_house_price.value )*1000;
+
+    if( in_house_price.value=='' ) {
+        house_price = 0;
+    }
+
+    let down_number;
+    let down_percent;
+
+    if( elem.value=='' ){
+        down_percent = 0;
+    }
+    else {
+        down_number = parseFloat( elem.value )*1000;
+        if(house_price==0) {
+            down_percent = 0;
+        } else {
+            down_percent = down_number/house_price*100;
+        }
+    }
+    in_down_percent.value = down_percent.toFixed(1);
+}
+
+function update_down_number( ) {
+    let elem = document.getElementById('in_down_percent');
+    let in_house_price = document.getElementById('in_house_price');
+    let in_down_number = document.getElementById('in_down_number');
+    
+    if( in_house_price.value=='' ) {
+        house_price = 0;
+    }
+    else {
+        house_price = parseFloat( in_house_price.value );
+    }
+
+    let down_number;
+    let down_percent
+    if( elem.value=='' ) {
+        down_number = 0;
+    }
+    else {
+        down_percent = parseFloat( elem.value )/100*1000;
+        down_number = down_percent*house_price/1000;
+    }
+    in_down_number.value = down_number.toFixed(0);
+}
+
+function calculate_res() {
+    let in_house_price = document.getElementById( 'in_house_price' );
+    let in_down_number = document.getElementById( 'in_down_number' );
+    let in_down_percent = document.getElementById( 'in_down_percent' );
+    let in_a_interestrate = document.getElementById( 'in_a_interestrate' );
+    let in_nyearterm = document.getElementById( 'in_nyearterm' );
+
+    let in_hoa = document.getElementById( 'in_hoa' );
+    let in_property_tax = document.getElementById( 'in_property_tax' );
+    let in_other_fee = document.getElementById( 'in_other_fee' );
+
+    let sp_mortgage = document.getElementById( 'sp_mortgage' );
+    let sp_monthly_payment = document.getElementById( 'sp_monthly_payment' );
+    let sp_monthly_cost = document.getElementById( 'sp_monthly_cost' );
+
+    let sp_yearly_payment = document.getElementById( 'sp_yearly_payment' );
+    let sp_yearly_property_tax = document.getElementById( 'sp_yearly_property_tax' );
+    let sp_yearly_hoa = document.getElementById( 'sp_yearly_hoa' );
+    let sp_yearly_other_fee = document.getElementById( 'sp_yearly_other_fee' );
+    let sp_yearly_cost = document.getElementById( 'sp_yearly_cost' );
+
+    let sp_total_interest = document.getElementById( 'sp_total_interest' );
+    let sp_house_price_interest = document.getElementById( 'sp_house_price_interest' );
+    let sp_total_interest_rate = document.getElementById( 'sp_total_interest_rate' );
+    let sp_total_interest_rate_principal = document.getElementById( 'sp_total_interest_rate_principal' );
+
+    if( in_down_number.value=='' ){ 
+        in_down_number.value = 0;
+    }
+
+    let house_price = parseFloat(in_house_price.value)*1000;
+    let down_number = parseFloat(in_down_number.value)*1000;
+    let down_percent = parseFloat(in_down_percent.value);
+    let interestrate = parseFloat(in_a_interestrate.value)/100/12;
+    let nterm = parseFloat(in_nyearterm.value)*12;
+
+    if(in_hoa.value=='') in_hoa.value = 0;
+    if(in_other_fee.value=='') in_other_fee.value = 0;
+    if(in_property_tax.value=='') in_property_tax.value = 0;
+    let hoa = parseFloat(in_hoa.value);
+    let other_fee = parseFloat(in_other_fee.value);
+    let property_tax = parseFloat(in_property_tax.value)/100*house_price;
+
+    let debt = house_price-down_number;
+    
+    let monthly_payment = debt*interestrate/( 1 - Math.pow( (interestrate+1), -nterm) );
+    let monthly_cost = monthly_payment + property_tax/12 + hoa + other_fee;
+
+    sp_monthly_payment.innerText = monthly_payment.toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+    sp_mortgage.innerText = ( house_price - down_number ).toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+    sp_monthly_cost.innerText = monthly_cost.toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+
+    sp_yearly_payment.innerText = (monthly_payment*12).toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+    sp_yearly_property_tax.innerText = property_tax.toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+    sp_yearly_hoa.innerText = (hoa*12).toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+    sp_yearly_other_fee.innerText = (other_fee*12).toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+    sp_yearly_cost.innerText = (monthly_cost*12).toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+    
+
+
+    let total_interest = monthly_payment*nterm - debt;
+
+    sp_total_interest.innerText = total_interest.toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+    let house_price_interest = house_price + total_interest;
+    sp_house_price_interest.innerText = house_price_interest.toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+    let total_interest_rate = total_interest/house_price*100.;
+    sp_total_interest_rate.innerText = total_interest_rate.toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+    let total_interest_rate_principal = total_interest/debt*100.;
+    sp_total_interest_rate_principal.innerText = total_interest_rate_principal.toLocaleString( 'en-US', {maximumFractionDigits: 0} );
+
+    var save_term_res = [];
+    let sm_debt = debt;
+    for( let iterm=0; iterm<nterm; iterm++ ) {
+        let sm_interest = sm_debt*interestrate;
+        let sm_principal = ( monthly_payment - sm_debt*interestrate );
+        sm_debt = sm_debt - ( monthly_payment - sm_debt*interestrate );
+        save_term_res.push( 
+            [iterm+1, sm_principal.toLocaleString( 'en-US', {maximumFractionDigits: 0} ), 
+            sm_interest.toLocaleString( 'en-US', {maximumFractionDigits: 0} ), 
+            sm_debt.toLocaleString( 'en-US', {maximumFractionDigits: 0} ),
+            hoa.toLocaleString( 'en-US', {maximumFractionDigits: 0} ),
+            other_fee.toLocaleString( 'en-US', {maximumFractionDigits: 0} ),
+            (property_tax/12).toLocaleString( 'en-US', {maximumFractionDigits: 0} ),
+            (sm_interest + hoa + other_fee + property_tax/12).toLocaleString( 'en-US', {maximumFractionDigits: 0} )
+         ] );
+    }
+    let dv_term_res = document.getElementById( 'dv_term_res' );
+    dv_term_res.innerHTML = '<table id="tbl_term_res" cellpadding="0" cellspacing="0">'
+        +'<tr> <th>Year<br>年</th> <th>Term<br>期</th> <th>Principal<br>本期本金还款</th> <th>Interest<br>本期利息费用</th>'
+        +'<th>HOA<br>本期物业费用</th> <th>Other Fee<br>本期其他费用</th> <th>Property Tax<br>本期房产税费用</th> <th>Net Cost<br>本期总费用</th></tr>'
+        +'</table>';
+    let tbl_term_res = document.getElementById( 'tbl_term_res' );
+    for( let iterm=0; iterm<nterm; iterm=iterm+12 ) {
+        let node = document.createElement("tr");
+        node.innerHTML = '<td>' + ( parseInt( (iterm+1)/12+1 ) ).toString() + '</td>'
+            + '<td>' + ( (iterm+1) ).toString() + '</td>'
+            + '<td>' + save_term_res[iterm][1] + '</td>'
+            + '<td>' + save_term_res[iterm][2] + '</td>'
+            + '<td>' + save_term_res[iterm][4] + '</td>'
+            + '<td>' + save_term_res[iterm][5] + '</td>'
+            + '<td>' + save_term_res[iterm][6] + '</td>'
+            + '<td>' + save_term_res[iterm][7] + '</td>'
+            ;
+        tbl_term_res.appendChild(node);
+    }
+    // console.log( save_term_res );
+}
+
+document.addEventListener('keyup', function(e) {
+    if( e.code=='Enter' ) { calculate_res(); }
+}
+);
+
+update_down_number( );
+calculate_res();
+
+</script>
+
+</body>
+</html>
