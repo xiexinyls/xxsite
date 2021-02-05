@@ -1,10 +1,7 @@
 ---
-title: "Misc"
+title: "Misc Notes"
 draft: false
 ---
-
-
-## Finance Notes
 
 1. Mortgage
    - [Mortgage Calculator](/xxsite/d_misc/mortgage.html)
