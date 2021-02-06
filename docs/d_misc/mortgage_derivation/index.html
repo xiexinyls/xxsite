@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="/xxsite/css/style.css" />
     <link rel="stylesheet" href="/xxsite/css/fonts.css" />
     
+
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -37,9 +42,10 @@
       }
     });
     </script>
-    <script type="text/javascript"
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+
+
+
+
 
   </head>
 
@@ -90,10 +96,10 @@ actual principal payment = ( monthly payment - current interest ) $$ m-[(1+r)rp-
 debt left = ( starting debt - actual principal payment )
 $$
 \begin{aligned}
-&amp;(1+r)p-m-[m-((1+r)rp-mr)]\<br>
-=&amp;(1+r)p-2m+((1+r)rp-mr)\<br>
-=&amp;(1+r)p+(1+r)rp-2m-mr\<br>
-=&amp;(r+1)^2p-(1+r)m-m
+&amp; (1+r)p-m-[m-((1+r)rp-mr)]\<br>
+= &amp; (1+r)p-2m+((1+r)rp-mr)\<br>
+= &amp; (1+r)p+(1+r)rp-2m-mr\<br>
+= &amp; (r+1)^2p-(1+r)m-m
 \end{aligned}
 $$</p>
 <p><strong>Third Month $n=3$</strong></p>
@@ -101,16 +107,16 @@ $$</p>
 <p>current interest = starting debt * monthly interest rate
 $$
 \begin{aligned}
-&amp;[ (r+1)^2p-(1+r)m-m ] r\<br>
-=&amp; r(r+1)^2p-(1+r)rm-rm
+&amp; [ (r+1)^2p-(1+r)m-m ] r\<br>
+= &amp; r(r+1)^2p-(1+r)rm-rm
 \end{aligned}
 $$
 actual principal payment = ( monthly payment - current interest ) $$ m-[r(r+1)^2p-(1+r)rm-rm] $$
 debt left = ( starting debt - actual principal payment )
 $$
 \begin{aligned}
-&amp;(r+1)^2p-(1+r)m-rm - \left[ m-[r(r+1)^2p-(1+r)rm-rm] \right]\<br>
-=&amp;(r+1)^3p -(1+r)^2m -(1+r)m - m
+&amp; (r+1)^2p-(1+r)m-rm - \left[ m-[r(r+1)^2p-(1+r)rm-rm] \right]\<br>
+= &amp; (r+1)^3p -(1+r)^2m -(1+r)m - m
 \end{aligned}
 $$</p>
 <p>Now the formula for debt left at the $n$th term seems to be
@@ -125,11 +131,11 @@ actual principal payment = ( monthly payment - current interest ) $$ m - [ r(r+1
 <p>debt left = ( starting debt - actual principal payment )
 $$
 \begin{aligned}
-&amp;(r+1)^{n}p + m\frac{ 1-(r+1)^{n} }{ r } -  \left [ m - [ r(r+1)^{n}p + rm\frac{ 1-(r+1)^{n} }{ r } ] \right ]  \<br>
-=&amp; (r+1)^{n+1}p + m\frac{ 1-(r+1)^{n} }{ r } - m + rm\frac{ 1-(r+1)^{n} }{ r } ]\<br>
-=&amp; (r+1)^{n+1}p + m [ \frac{ 1-(r+1)^{n} }{ r } - \frac{r}{r} + \frac{ r-r(r+1)^{n} }{ r } ] \<br>
-=&amp; (r+1)^{n+1}p + m [ \frac{ 1-(r+1)(r+1)^{n} }{ r } ] \<br>
-=&amp; (r+1)^{n+1}p + m [ \frac{ 1-(r+1)^{n+1} }{ r } ]
+&amp; (r+1)^{n}p + m\frac{ 1-(r+1)^{n} }{ r } -  \left [ m - [ r(r+1)^{n}p + rm\frac{ 1-(r+1)^{n} }{ r } ] \right ]  \<br>
+= &amp; (r+1)^{n+1}p + m\frac{ 1-(r+1)^{n} }{ r } - m + rm\frac{ 1-(r+1)^{n} }{ r } ]\<br>
+= &amp; (r+1)^{n+1}p + m [ \frac{ 1-(r+1)^{n} }{ r } - \frac{r}{r} + \frac{ r-r(r+1)^{n} }{ r } ] \<br>
+= &amp; (r+1)^{n+1}p + m [ \frac{ 1-(r+1)(r+1)^{n} }{ r } ] \<br>
+= &amp; (r+1)^{n+1}p + m [ \frac{ 1-(r+1)^{n+1} }{ r } ]
 \end{aligned}
 $$</p>
 <p>Cosistent with the formula for $n$th term. So it proves.</p>
@@ -140,8 +146,8 @@ So we have the formula for monthly payment $$ m = \frac{ (r+1)^np }{ \frac{ (r+1
 <p>Total Interest = number of months * number of terms - principal
 $$
 \begin{aligned}
-m*n - p &amp;= \frac{ p r }{ 1 - (r+1)^{-n} }*n - p \<br>
-&amp;= [ \frac{ n r }{ 1 - (r+1)^{-n} } - 1 ]p
+m*n - p &amp; = \frac{ p r }{ 1 - (r+1)^{-n} }*n - p \<br>
+&amp; = [ \frac{ n r }{ 1 - (r+1)^{-n} } - 1 ]p
 \end{aligned}
 $$</p>
 <h3 id="an-example">An Example</h3>

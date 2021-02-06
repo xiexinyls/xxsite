@@ -35,10 +35,10 @@ actual principal payment = ( monthly payment - current interest ) $$ m-[(1+r)rp-
 debt left = ( starting debt - actual principal payment )
 $$
 \begin{aligned}
-&(1+r)p-m-[m-((1+r)rp-mr)]\\
-=&(1+r)p-2m+((1+r)rp-mr)\\
-=&(1+r)p+(1+r)rp-2m-mr\\
-=&(r+1)^2p-(1+r)m-m
+& (1+r)p-m-[m-((1+r)rp-mr)]\\
+= & (1+r)p-2m+((1+r)rp-mr)\\
+= & (1+r)p+(1+r)rp-2m-mr\\
+= & (r+1)^2p-(1+r)m-m
 \end{aligned}
 $$
 
@@ -49,16 +49,16 @@ starting debt = last debt $(r+1)^2p-(1+r)m-m$
 current interest = starting debt * monthly interest rate
 $$
 \begin{aligned}
-&[ (r+1)^2p-(1+r)m-m ] r\\
-=& r(r+1)^2p-(1+r)rm-rm
+& [ (r+1)^2p-(1+r)m-m ] r\\
+= & r(r+1)^2p-(1+r)rm-rm
 \end{aligned}
 $$
 actual principal payment = ( monthly payment - current interest ) $$ m-[r(r+1)^2p-(1+r)rm-rm] $$
 debt left = ( starting debt - actual principal payment )
 $$
 \begin{aligned}
-&(r+1)^2p-(1+r)m-rm - \left[ m-[r(r+1)^2p-(1+r)rm-rm] \right]\\
-=&(r+1)^3p -(1+r)^2m -(1+r)m - m
+& (r+1)^2p-(1+r)m-rm - \left[ m-[r(r+1)^2p-(1+r)rm-rm] \right]\\
+= & (r+1)^3p -(1+r)^2m -(1+r)m - m
 \end{aligned}
 $$
 
@@ -80,11 +80,11 @@ actual principal payment = ( monthly payment - current interest ) $$ m - [ r(r+1
 debt left = ( starting debt - actual principal payment )
 $$
 \begin{aligned}
-&(r+1)^{n}p + m\frac{ 1-(r+1)^{n} }{ r } -  \left [ m - [ r(r+1)^{n}p + rm\frac{ 1-(r+1)^{n} }{ r } ] \right ]  \\
-=& (r+1)^{n+1}p + m\frac{ 1-(r+1)^{n} }{ r } - m + rm\frac{ 1-(r+1)^{n} }{ r } ]\\
-=& (r+1)^{n+1}p + m [ \frac{ 1-(r+1)^{n} }{ r } - \frac{r}{r} + \frac{ r-r(r+1)^{n} }{ r } ] \\
-=& (r+1)^{n+1}p + m [ \frac{ 1-(r+1)(r+1)^{n} }{ r } ] \\
-=& (r+1)^{n+1}p + m [ \frac{ 1-(r+1)^{n+1} }{ r } ]
+& (r+1)^{n}p + m\frac{ 1-(r+1)^{n} }{ r } -  \left [ m - [ r(r+1)^{n}p + rm\frac{ 1-(r+1)^{n} }{ r } ] \right ]  \\
+= & (r+1)^{n+1}p + m\frac{ 1-(r+1)^{n} }{ r } - m + rm\frac{ 1-(r+1)^{n} }{ r } ]\\
+= & (r+1)^{n+1}p + m [ \frac{ 1-(r+1)^{n} }{ r } - \frac{r}{r} + \frac{ r-r(r+1)^{n} }{ r } ] \\
+= & (r+1)^{n+1}p + m [ \frac{ 1-(r+1)(r+1)^{n} }{ r } ] \\
+= & (r+1)^{n+1}p + m [ \frac{ 1-(r+1)^{n+1} }{ r } ]
 \end{aligned}
 $$
 
@@ -99,8 +99,8 @@ So we have the formula for monthly payment $$ m = \frac{ (r+1)^np }{ \frac{ (r+1
 Total Interest = number of months * number of terms - principal
 $$
 \begin{aligned}
-m*n - p &= \frac{ p r }{ 1 - (r+1)^{-n} }*n - p \\
-&= [ \frac{ n r }{ 1 - (r+1)^{-n} } - 1 ]p
+m*n - p & = \frac{ p r }{ 1 - (r+1)^{-n} }*n - p \\
+& = [ \frac{ n r }{ 1 - (r+1)^{-n} } - 1 ]p
 \end{aligned}
 $$
 
