@@ -1,9 +1,9 @@
 ---
-title: "Misc Notes"
+title: "Miscellaneous Notes"
 draft: false
 ---
 
-1. Finance
+- Finance
    - [Mortgage Calculator](/xxsite/d_misc/mortgage.html)
    - [Mortgage Derivation](/xxsite/d_misc/mortgage_derivation)
 
