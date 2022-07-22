@@ -1,0 +1,163 @@
+<html>
+
+<head>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js" ></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css" rel="stylesheet" />
+
+<script src="data_geom.js"></script>
+
+<style>
+.mapboxgl-popup-content {
+    width: 350px;
+    color: grey;
+    padding: 15px;
+}
+
+.popupvalue {
+    font-weight: bold;
+    font-size: medium;
+    font-family: monospace;
+}
+
+</style>
+</head>
+
+<body>
+<div id="map" style="width:100%; height:100%;">
+</div>
+<script>
+let l_ly = ['ly_elem', 'ly_mid', 'ly_high'];
+mapboxgl.accessToken = 'pk.eyJ1IjoieGlleGluNTMiLCJhIjoiY2w1aWxkZGtuMDk1djNibzl5dTV0N29kaCJ9.jyYbEA7otj1Ya7MBggVEmQ';
+let dot_size_expr_2 = [ "step", ['to-number', ['get', 'score'] ], 
+    2,
+    6, 4, 
+    7, 5,
+    8, 6,
+    9, 7,
+    10, 8
+    ];
+let map = new mapboxgl.Map(
+    {
+        container: 'map', style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 3.5, center: [-97, 38]
+    }
+);
+
+map.on( 'load', function () {
+    map.addSource( "src_elem", 
+    {
+        type: "geojson",
+        data: data_geom["src_elem"]
+    } );
+    map.addSource( "src_mid", 
+    {
+        type: "geojson",
+        data: data_geom["src_mid"]
+    } );
+    map.addSource( "src_high", 
+    {
+        type: "geojson",
+        data: data_geom["src_high"]
+    } );
+    map.addLayer(
+        {
+            "id":"ly_elem",
+            "type":"circle",
+            "source":"src_elem",
+            // "paint": { "circle-color":"red", 
+            //     "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
+            //         1, ['*', 0.5, ['to-number', ['get', 'score'] ] ], 
+            //         5, ['*', 0.5, ['to-number', ['get', 'score'] ] ] ] }
+            "paint": { "circle-color":"rgba(255,0,0,0.8)", 
+                "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
+                    1, ['*', 0.3, dot_size_expr_2 ], 
+                    8, ['*', 1, dot_size_expr_2 ] ] }
+            // "paint": { "circle-color":"rgba(255,0,0,0.8)", 
+            //     "circle-radius":dot_size_expr_2 }
+        }
+    );
+    map.addLayer(
+        {
+            "id":"ly_mid",
+            "type":"circle",
+            "source":"src_mid",
+            // "paint": { "circle-color":"red", 
+            //     "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
+            //         1, ['*', 0.5, ['to-number', ['get', 'score'] ] ], 
+            //         5, ['*', 0.5, ['to-number', ['get', 'score'] ] ] ] }
+            "paint": { "circle-color":"rgba(255, 153, 0,0.8)", 
+                "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
+                    1, ['*', 0.3, dot_size_expr_2 ], 
+                    8, ['*', 1, dot_size_expr_2 ] ] }
+            // "paint": { "circle-color":"rgba(255, 153, 0,0.8)", 
+            //     "circle-radius": dot_size_expr_2 }
+        }
+    );
+    map.addLayer(
+        {
+            "id":"ly_high",
+            "type":"circle",
+            "source":"src_high",
+            // "paint": { "circle-color":"red", 
+            //     "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
+            //         1, ['*', 0.5, ['to-number', ['get', 'score'] ] ], 
+            //         5, ['*', 0.5, ['to-number', ['get', 'score'] ] ] ] }
+            "paint": { "circle-color":"rgba(0, 153, 255,0.8)", 
+                "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
+                    1, ['*', 0.3, dot_size_expr_2 ], 
+                    8, ['*', 1, dot_size_expr_2 ] ] }
+            // "paint": { "circle-color":"rgba(0, 153, 255,0.8)", 
+            //     "circle-radius": dot_size_expr_2}
+        }
+    );
+    let popup;
+    for( let i=0; i<l_ly.length; ++i) {
+        map.on( 'click', l_ly[i], function (e) {
+            let feature = e.features[0];
+            // console.log( feature.properties );
+            if( feature.properties.address_full ) {
+                address_info = feature.properties.address_full;
+            }
+            else {
+                address_info = 'NA';
+            }
+            if( feature.properties.score ) {
+                score = feature.properties.score;
+            }
+            else {
+                score = 'NA';
+            }
+            if( feature.properties.school_name ) {
+                school_name = feature.properties.school_name;
+            }
+            else {
+                school_name = 'NA';
+            }
+            if( feature.properties.grade ) {
+                grade = feature.properties.grade;
+            }
+            else {
+                grade = 'NA';
+            }
+            let s_info = '';
+            s_info = s_info +'School: <span class="popupvalue">'+school_name+'</span>'
+                +'<br>Address: <span class="popupvalue">'+address_info+'</span>'
+                +'<br>Grade: <span class="popupvalue">'+grade+'</span>'
+                +'<br>Score: <span class="popupvalue">'+score+'</span>';
+            
+            popup = new mapboxgl.Popup().setLngLat( e.lngLat ).setHTML( s_info ).setMaxWidth("500px").addTo(map);
+        } );
+        map.on( 'mouseenter', l_ly[i], function(e) {
+            map.getCanvas().style.cursor = 'pointer';
+        } );
+        map.on( 'mouseleave', l_ly[i], function(e) {
+            map.getCanvas().style.cursor = '';
+        } );
+    }
+} );
+
+</script>
+</body>
+
+</html>
