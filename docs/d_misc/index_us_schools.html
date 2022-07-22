@@ -9,25 +9,36 @@
 
 <style>
 .mapboxgl-popup-content {
-    width: 350px;
+    width: 380px;
     color: grey;
     padding: 15px;
 }
 
 .popupvalue {
     font-weight: bold;
-    font-size: medium;
+    font-size: large;
     font-family: monospace;
 }
 body {
     margin: 0;
     padding: 0;
 }
+.popupvalue a:link {
+    text-decoration:none;
+    color: crimson;
+}
+.topbar {
+    position:fixed; z-index:3; top:0px; left:0px; width:100%; height:20px;
+    background-color: rgba(10, 10, 10, 0.8); color:lightgray;
+    font-size: large; font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
 </style>
 </head>
 
 <body>
-<div id="map" style="width:100%; height:100%;">
+<div class="topbar">US Public School Map <span style="font-size:6pt">data from GreatSchools, visualized by Xin Xie</span></div>
+<div id="map" style="position:absolute; top:0; width:100%; height:100%">
 </div>
 <script>
 let l_ly = ['ly_elem', 'ly_mid', 'ly_high'];
@@ -40,10 +51,12 @@ let dot_size_expr_2 = [ "step", ['to-number', ['get', 'score'] ],
     9, 7,
     10, 8
     ];
+let factor_zoom_1 = 0.1;
+let factor_zoom_2 = 1.1;
 let map = new mapboxgl.Map(
     {
         container: 'map', style: 'mapbox://styles/mapbox/dark-v10',
-        zoom: 3.5, center: [-97, 38]
+        zoom: 4, center: [-97, 38]
     }
 );
 
@@ -68,16 +81,10 @@ map.on( 'load', function () {
             "id":"ly_elem",
             "type":"circle",
             "source":"src_elem",
-            // "paint": { "circle-color":"red", 
-            //     "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
-            //         1, ['*', 0.5, ['to-number', ['get', 'score'] ] ], 
-            //         5, ['*', 0.5, ['to-number', ['get', 'score'] ] ] ] }
             "paint": { "circle-color":"rgba(255,0,0,0.8)", 
                 "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
-                    1, ['*', 0.3, dot_size_expr_2 ], 
-                    8, ['*', 1, dot_size_expr_2 ] ] }
-            // "paint": { "circle-color":"rgba(255,0,0,0.8)", 
-            //     "circle-radius":dot_size_expr_2 }
+                    1, ['*', factor_zoom_1, dot_size_expr_2 ], 
+                    8, ['*', factor_zoom_2, dot_size_expr_2 ] ] }
         }
     );
     map.addLayer(
@@ -85,16 +92,10 @@ map.on( 'load', function () {
             "id":"ly_mid",
             "type":"circle",
             "source":"src_mid",
-            // "paint": { "circle-color":"red", 
-            //     "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
-            //         1, ['*', 0.5, ['to-number', ['get', 'score'] ] ], 
-            //         5, ['*', 0.5, ['to-number', ['get', 'score'] ] ] ] }
             "paint": { "circle-color":"rgba(255, 153, 0,0.8)", 
                 "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
-                    1, ['*', 0.3, dot_size_expr_2 ], 
-                    8, ['*', 1, dot_size_expr_2 ] ] }
-            // "paint": { "circle-color":"rgba(255, 153, 0,0.8)", 
-            //     "circle-radius": dot_size_expr_2 }
+                    1, ['*', factor_zoom_1, dot_size_expr_2 ], 
+                    8, ['*', factor_zoom_2, dot_size_expr_2 ] ] }
         }
     );
     map.addLayer(
@@ -102,16 +103,10 @@ map.on( 'load', function () {
             "id":"ly_high",
             "type":"circle",
             "source":"src_high",
-            // "paint": { "circle-color":"red", 
-            //     "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
-            //         1, ['*', 0.5, ['to-number', ['get', 'score'] ] ], 
-            //         5, ['*', 0.5, ['to-number', ['get', 'score'] ] ] ] }
             "paint": { "circle-color":"rgba(0, 153, 255,0.8)", 
                 "circle-radius": [ "interpolate", ["linear"], ["zoom"], 
-                    1, ['*', 0.3, dot_size_expr_2 ], 
-                    8, ['*', 1, dot_size_expr_2 ] ] }
-            // "paint": { "circle-color":"rgba(0, 153, 255,0.8)", 
-            //     "circle-radius": dot_size_expr_2}
+                    1, ['*', factor_zoom_1, dot_size_expr_2 ], 
+                    8, ['*', factor_zoom_2, dot_size_expr_2 ] ] }
         }
     );
     let popup;
@@ -151,10 +146,11 @@ map.on( 'load', function () {
             }
             let s_info = '';
             s_info = s_info +'School: <span class="popupvalue">'+school_name+'</span>'
-                +'<br>Address: <span class="popupvalue">'+address_info+'</span>'
-                +'<br>Grade: <span class="popupvalue">'+grade+'</span>'
-                +'<br>Score: <span class="popupvalue">'+score+'</span>'
-                +'<br>RedFin: <a href="https://www.redfin.com/zipcode/'+zipcode+'">Find</span>';
+                +'<br>Address <span class="popupvalue">'+address_info+'</span>'
+                +'<br>Grade <span class="popupvalue">'+grade+'</span>'
+                +'<br>Score <span class="popupvalue">'+score+'</span>'
+                +'<br><span class="popupvalue"><a href="https://www.redfin.com/zipcode/'+zipcode+'" target="_blank">Find Houses from Redfin</a></span>'
+                +'<br><span class="popupvalue"><a href="https://www.zillow.com/homes/'+zipcode+'_rb/" target="_blank">Find Houses from Zillow</a></span>';
             
             popup = new mapboxgl.Popup().setLngLat( e.lngLat ).setHTML( s_info ).setMaxWidth("500px").addTo(map);
         } );
