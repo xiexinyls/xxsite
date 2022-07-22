@@ -143,11 +143,18 @@ map.on( 'load', function () {
             else {
                 grade = 'NA';
             }
+            if( feature.properties.zipcode ) {
+                zipcode = feature.properties.zipcode;
+            }
+            else {
+                zipcode = 'NA';
+            }
             let s_info = '';
             s_info = s_info +'School: <span class="popupvalue">'+school_name+'</span>'
                 +'<br>Address: <span class="popupvalue">'+address_info+'</span>'
                 +'<br>Grade: <span class="popupvalue">'+grade+'</span>'
-                +'<br>Score: <span class="popupvalue">'+score+'</span>';
+                +'<br>Score: <span class="popupvalue">'+score+'</span>'
+                +'<br>RedFin: <a href="https://www.redfin.com/zipcode/'+zipcode+'">Find</span>';
             
             popup = new mapboxgl.Popup().setLngLat( e.lngLat ).setHTML( s_info ).setMaxWidth("500px").addTo(map);
         } );
