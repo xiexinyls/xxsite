@@ -144,11 +144,18 @@ map.on( 'load', function () {
             else {
                 zipcode = 'NA';
             }
+            if( feature.properties.school_url ) {
+                school_url = feature.properties.school_url;
+            }
+            else {
+                school_url = 'NA';
+            }
             let s_info = '';
             s_info = s_info +'School: <span class="popupvalue">'+school_name+'</span>'
                 +'<br>Address <span class="popupvalue">'+address_info+'</span>'
                 +'<br>Grade <span class="popupvalue">'+grade+'</span>'
                 +'<br>Score <span class="popupvalue">'+score+'</span>'
+                +'<br><span class="popupvalue"><a href="'+school_url+'" target="_blank">Link to School</a></span>'
                 +'<br><span class="popupvalue"><a href="https://www.redfin.com/zipcode/'+zipcode+'" target="_blank">Find Houses from Redfin</a></span>'
                 +'<br><span class="popupvalue"><a href="https://www.zillow.com/homes/'+zipcode+'_rb/" target="_blank">Find Houses from Zillow</a></span>';
             
